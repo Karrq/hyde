@@ -43,14 +43,24 @@
                         {% endfor %}
                         {% endblock sidebar_nav %}
                     </ul>
+                    
+                    <div class="sidebar-footer">
+                      {% block sidebar_footer %}
+                      <p>© {{now() | date(format="%Y")}} Francesco Dainese</p>
+                      {% endblock sidebar_footer %}
+                    </div>
                 </div>
             </div>
         {% endblock sidebar %}
+        
+        {% block content_header %}{% endblock content_header %}
 
         <div class="content container">
             {% block content %}
                 <div class="posts">
                     {% for page in section.pages | reverse %}
+                    {% set hidden = page.extra.hidden | default(value=false) %}
+                    {% if hidden == false %}
                       <div class="post">
                         <h1 class="post-title">
                           <a href="{{ page.permalink }}">
@@ -58,13 +68,24 @@
                           </a>
                         </h1>
 
+                        {% if page.summary %}
+                        <p class="post-summary">{{ page.summary | safe }}</p>
+                        {# TODO: Add "Read more..." #}
+                        {% endif %}
+
+                        {% if page.date %}
                         <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                        {% endif %}
+
+                        {# TODO: Add "Read time" #}
                       </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             {% endblock content %}
         </div>
 
+        {% block content_footer %}{% endblock content_footer %}
     </body>
 
 </html>
