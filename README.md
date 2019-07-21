@@ -1,24 +1,27 @@
 # hyde
-Hyde is a brazen two-column [Zola](https://github.com/getzola/zola) based on the Jekyll theme of the same name that pairs a prominent sidebar with uncomplicated content.
+Hyde is a brazen two-column [Zola](https://github.com/getzola/zola) based on the [Jekyll](https://jekyllrb.com/) theme of the same [name](https://github.com/poole/hyde) that pairs a prominent sidebar with uncomplicated content.
+
+This repository contains a custom version of said theme based on my needs and references.
 
 ![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
 
-
 ## Contents
 
-- [Installation](#installation)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Sticky sidebar content](#sticky-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
+- [Installation](#Installation)
+- [Options](#Options)
+  - [Sidebar menu](#Sidebar-menu)
+  - [Sticky sidebar content](#Sticky-sidebar-content)
+  - [Themes](#Themes)
+  - [Reverse layout](#Reverse-layout)
+- [Author](#Author)
+- [License](#License)
 
 ## Installation
 First download this theme to your `themes` directory:
 
 ```bash
 $ cd themes
-$ git clone https://github.com/getzola/hyde.git
+$ git clone https://github.com/Karrq/hyde.git
 ```
 and then enable it in your `config.toml`:
 
@@ -65,3 +68,13 @@ To create your own theme, look to the Themes section of [included CSS file](http
 ![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
 
 Hyde's page orientation can be reversed by setting `hyde_reverse` to `true` in the `config.toml`.
+
+## Author
+
+Originally developed by **Mark Otto**, ported to Zola by **Vincent Prouillet** and finally adapted by **Francesco Dainese**.
+
+## License
+
+Open sourced under the [MIT license](LICENSE.md).
+
+<3
